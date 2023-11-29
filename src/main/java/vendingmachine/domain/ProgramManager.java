@@ -27,7 +27,7 @@ public class ProgramManager {
     }
 
     void setMachineHoldingAmount() {
-
+        String input = inputView.getMachineHoldingAmount();
     }
 
     void setMachineRandomCoinAmount() {
