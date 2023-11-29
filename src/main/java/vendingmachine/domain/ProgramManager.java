@@ -1,4 +1,52 @@
 package vendingmachine.domain;
 
+import vendingmachine.view.InputView;
+import vendingmachine.view.OutputView;
+
 public class ProgramManager {
+    static InputView inputView;
+    static OutputView outputView;
+    public ProgramManager() {
+        this.inputView = new InputView();
+        this.outputView = new OutputView();
+    }
+
+    public void run() {
+        // 자판기 보유금액 설정
+        setMachineHoldingAmount();
+        // 동전개수 랜덤 설정
+        setMachineRandomCoinAmount();
+        // 상품등록
+        setItemInMachine();
+        // 투입금액 입력
+        putMoney();
+        // 상품 구매
+        buyItem();
+        // 잔돈 반환
+        returnChange();
+    }
+
+    void setMachineHoldingAmount() {
+
+    }
+
+    void setMachineRandomCoinAmount() {
+
+    }
+
+    void setItemInMachine() {
+
+    }
+
+    void putMoney() {
+
+    }
+
+    void buyItem() {
+
+    }
+
+    void returnChange() {
+
+    }
 }
