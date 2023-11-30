@@ -6,6 +6,7 @@ import vendingmachine.view.OutputView;
 public class ProgramManager {
     static InputView inputView;
     static OutputView outputView;
+    static VendingMachine vendingMachine;
     public ProgramManager() {
         this.inputView = new InputView();
         this.outputView = new OutputView();
@@ -28,6 +29,7 @@ public class ProgramManager {
 
     void setMachineHoldingAmount() {
         String input = inputView.getMachineHoldingAmount();
+        vendingMachine = new VendingMachine(input);
     }
 
     void setMachineRandomCoinAmount() {

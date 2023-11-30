@@ -1,16 +1,16 @@
-vendingmachine/Application.java
- vendingmachine.Application
+vendingmachine/domain/Customer.java
+ vendingmachine.domain.Customer
 vendingmachine/domain/Item.java
  vendingmachine.domain.Item
 vendingmachine/view/OutputView.java
  vendingmachine.view.OutputView
+vendingmachine/view/InputView.java
+ vendingmachine.view.InputView
+vendingmachine/Application.java
+ vendingmachine.Application
+vendingmachine/domain/Coin.java
+ vendingmachine.domain.Coin
 vendingmachine/domain/ProgramManager.java
  vendingmachine.domain.ProgramManager
 vendingmachine/domain/VendingMachine.java
  vendingmachine.domain.VendingMachine
-vendingmachine/domain/Coin.java
- vendingmachine.domain.Coin
-vendingmachine/view/InputView.java
- vendingmachine.view.InputView
-vendingmachine/domain/Customer.java
- vendingmachine.domain.Customer
