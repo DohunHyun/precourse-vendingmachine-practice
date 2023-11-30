@@ -12,7 +12,18 @@ public class VendingMachine {
     Map<Coin, Integer> coins = new HashMap<>();
 
     VendingMachine(String initialChange) {
-        setMachineRandomCoinAmount(Integer.parseInt(initialChange));
+        int change = validateChange(initialChange);
+        setMachineRandomCoinAmount(change);
+    }
+
+    int validateChange(String initialChange) {
+        int change = Integer.parseInt(initialChange);
+        // throw exception 숫자 아님
+        if(change % 10 == 0) {
+            return change;
+        }
+        // throw exception 10원 단위
+        return change;
     }
 
     void setMachineRandomCoinAmount(int change) {
