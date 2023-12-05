@@ -59,6 +59,8 @@ public class ProgramManager {
 
     void returnChange() {
         // 투입금액 출력
+        outputView.printMoney(vendingMachine.getInputMoney());
         // 잔돈 출력
+        outputView.printCoins(vendingMachine.getCoins());
     }
 }

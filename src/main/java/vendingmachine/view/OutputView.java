@@ -16,12 +16,27 @@ public class OutputView {
         Iterator<Coin> keys = keyList.iterator();
         while(keys.hasNext()) {
             Coin coin = keys.next();
-            Integer amount = coins.get(coin);
+            int amount = coins.get(coin);
             System.out.println(coin.getAmount() + "원 : " + amount + "개");
         }
     }
 
     public void printMoney(int money) {
         System.out.println("투입 금액: " + money);
+    }
+
+    public void printCoins(Map<Coin, Integer> coins) {
+        System.out.println("잔돈");
+        List<Coin> keyList = new ArrayList<>(coins.keySet());
+        keyList.sort((s1, s2) -> s2.getAmount() - s1.getAmount());
+        Iterator<Coin> keys = keyList.iterator();
+        while(keys.hasNext()) {
+            Coin coin = keys.next();
+            int amount = coins.get(coin);
+            if(amount == 0) {
+                continue;
+            }
+            System.out.println(coin.getAmount() + "원 : " + amount + "개");
+        }
     }
 }
