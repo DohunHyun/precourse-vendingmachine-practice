@@ -36,7 +36,7 @@ public class OutputView {
             if(amount == 0) {
                 continue;
             }
-            System.out.println(coin.getAmount() + "원 : " + amount + "개");
+            System.out.println(coin.getAmount() + "원 - " + amount + "개");
         }
     }
 }
