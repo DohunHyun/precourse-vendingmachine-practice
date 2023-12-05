@@ -1,6 +1,7 @@
 package vendingmachine.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.stream.IntStream;
 
 public class VendingMachine {
     Map<Coin, Integer> coins = new HashMap<>();
+    List<Item> stockList = new ArrayList<>();
 
     VendingMachine(String initialChange) {
         int change = validateChange(initialChange);
@@ -41,5 +43,20 @@ public class VendingMachine {
             change -= coin.getAmount() * random;
         }
         coins.put(Coin.COIN_10, coins.get(Coin.COIN_10) + (change / Coin.COIN_10.getAmount()));
+    }
+
+    void setItemInMachine(String input) {
+        validateItem(input);
+        List<String> inputToList = Arrays.asList(input.split(";"));
+        for(String item : inputToList) {
+            String temp2 = item.replaceAll("\\[", "");
+            temp2 = temp2.replaceAll("\\]", "");
+            List<String> items = Arrays.asList(temp2.split(","));
+            stockList.add(new Item(items.get(0), Integer.parseInt(items.get(1)), Integer.parseInt(items.get(2))));
+        }
+    }
+
+    void validateItem(String input) {
+
     }
 }

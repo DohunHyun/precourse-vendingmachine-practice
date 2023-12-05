@@ -1,13 +1,13 @@
-vendingmachine/domain/Customer.java
- vendingmachine.domain.Customer
+vendingmachine/Application.java
+ vendingmachine.Application
 vendingmachine/domain/Item.java
  vendingmachine.domain.Item
 vendingmachine/view/OutputView.java
  vendingmachine.view.OutputView
+vendingmachine/domain/Customer.java
+ vendingmachine.domain.Customer
 vendingmachine/view/InputView.java
  vendingmachine.view.InputView
-vendingmachine/Application.java
- vendingmachine.Application
 vendingmachine/domain/Coin.java
  vendingmachine.domain.Coin
 vendingmachine/domain/ProgramManager.java

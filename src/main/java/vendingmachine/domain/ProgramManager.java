@@ -15,8 +15,6 @@ public class ProgramManager {
     public void run() {
         // 자판기 보유금액 설정
         setMachineHoldingAmount();
-        // 동전개수 랜덤 설정
-        setMachineRandomCoinAmount();
         // 상품등록
         setItemInMachine();
         // 투입금액 입력
@@ -32,12 +30,9 @@ public class ProgramManager {
         vendingMachine = new VendingMachine(input);
     }
 
-    void setMachineRandomCoinAmount() {
-
-    }
-
     void setItemInMachine() {
-
+        String input = inputView.getItemForMachine();
+        vendingMachine.setItemInMachine(input);
     }
 
     void putMoney() {
