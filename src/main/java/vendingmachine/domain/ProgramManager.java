@@ -15,6 +15,8 @@ public class ProgramManager {
     public void run() {
         // 자판기 보유금액 설정
         setMachineHoldingAmount();
+        // 자판기 보유 동전 출력
+        showVendingMachineCoins();
         // 상품등록
         setItemInMachine();
         // 투입금액 입력
@@ -28,6 +30,10 @@ public class ProgramManager {
     void setMachineHoldingAmount() {
         String input = inputView.getMachineHoldingAmount();
         vendingMachine = new VendingMachine(input);
+    }
+
+    void showVendingMachineCoins() {
+        outputView.showVendingMachineCoins(vendingMachine.getCoins());
     }
 
     void setItemInMachine() {

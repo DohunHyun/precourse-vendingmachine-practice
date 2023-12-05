@@ -59,4 +59,8 @@ public class VendingMachine {
     void validateItem(String input) {
 
     }
+
+    Map<Coin, Integer> getCoins() {
+        return coins;
+    }
 }
