@@ -12,6 +12,7 @@ import java.util.stream.IntStream;
 public class VendingMachine {
     Map<Coin, Integer> coins = new HashMap<>();
     List<Item> stockList = new ArrayList<>();
+    int inputMoney;
 
     VendingMachine(String initialChange) {
         int change = validateChange(initialChange);
@@ -58,6 +59,12 @@ public class VendingMachine {
 
     void validateItem(String input) {
 
+    }
+
+    void setInputMoney(String inputMoney) {
+        // 돈을 입력 받고, 잔돈을 저장.
+        // 숫자 아니면 예외 발생
+        this.inputMoney = Integer.parseInt(inputMoney);
     }
 
     Map<Coin, Integer> getCoins() {

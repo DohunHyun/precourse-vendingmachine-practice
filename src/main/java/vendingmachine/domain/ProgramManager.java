@@ -42,14 +42,19 @@ public class ProgramManager {
     }
 
     void putMoney() {
-
+        String input = inputView.getInputMoney();
+        vendingMachine.setInputMoney(input);
     }
 
     void buyItem() {
+        // 잔액이 상품가격 보다 높으면 계속.
 
+        // 투입금액 출력
+        // 상품명 입력
     }
 
     void returnChange() {
-
+        // 투입금액 출력
+        // 잔돈 출력
     }
 }
