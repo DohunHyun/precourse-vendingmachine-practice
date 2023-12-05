@@ -20,4 +20,8 @@ public class OutputView {
             System.out.println(coin.getAmount() + "원 : " + amount + "개");
         }
     }
+
+    public void printMoney(int money) {
+        System.out.println("투입 금액: " + money);
+    }
 }

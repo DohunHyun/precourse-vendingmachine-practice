@@ -67,7 +67,31 @@ public class VendingMachine {
         this.inputMoney = Integer.parseInt(inputMoney);
     }
 
+    boolean checkMoney() {
+        for(Item item : stockList) {
+            if(item.amount > 0 && item.price <= inputMoney) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void buyItemWithName(String itemName) {
+        for(Item item : stockList) {
+            if(item.name == itemName && item.amount > 0 && item.price <= inputMoney) {
+                item.amount--;
+                inputMoney -= item.price;
+                return;
+            }
+        }
+        // 상품 구매 못함. 이름이 다른건지, 재고가 없는건지, 잔액이 부족한지,
+    }
+
     Map<Coin, Integer> getCoins() {
         return coins;
+    }
+
+    int getInputMoney() {
+        return inputMoney;
     }
 }

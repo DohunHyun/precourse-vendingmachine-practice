@@ -48,9 +48,13 @@ public class ProgramManager {
 
     void buyItem() {
         // 잔액이 상품가격 보다 높으면 계속.
-
-        // 투입금액 출력
-        // 상품명 입력
+        while(vendingMachine.checkMoney()) {
+            // 투입금액 출력
+            outputView.printMoney(vendingMachine.getInputMoney());
+            // 상품명 입력
+            String itemName = inputView.getItemForBuying();
+            vendingMachine.buyItemWithName(itemName);
+        }
     }
 
     void returnChange() {
